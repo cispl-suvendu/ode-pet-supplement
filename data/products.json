@@ -1,0 +1,88 @@
+[
+    {
+        "id": "joint-support",
+        "name": "Joint Support",
+        "tagline": "Mobility & Comfort",
+        "price": 42,
+        "skuColor": "#6D8A96",
+        "ingredients": [
+            "Glucosamine",
+            "Chondroitin",
+            "MSM"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/joint-support.jpg"
+    },
+    {
+        "id": "skin-coat",
+        "name": "Skin & Coat",
+        "tagline": "Radiance & Nourishment",
+        "price": 38,
+        "skuColor": "#BC7863",
+        "ingredients": [
+            "Omega-3",
+            "Biotin",
+            "Zinc"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/skin-coat.jpg"
+    },
+    {
+        "id": "gut-health",
+        "name": "Gut Health",
+        "tagline": "Digestive Balance & Immune Support",
+        "price": 40,
+        "skuColor": "#7A8B76",
+        "ingredients": [
+            "Probiotics",
+            "Prebiotics",
+            "Digestive Enzymes"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/gut-health.jpg"
+    },
+    {
+        "id": "calming",
+        "name": "Calming",
+        "tagline": "Relaxation & Balance",
+        "price": 38,
+        "skuColor": "#E2D9CE",
+        "ingredients": [
+            "L-Theanine",
+            "Ashwagandha",
+            "Chamomile",
+            "Melatonin"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/calming.jpg"
+    },
+    {
+        "id": "multivitamin",
+        "name": "Multivitamin",
+        "tagline": "Daily Health & Vitality",
+        "price": 36,
+        "skuColor": "#5A7247",
+        "ingredients": [
+            "25+ Essential Vitamins & Minerals",
+            "Whole Food Blend",
+            "Antioxidants"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/multivitamin.jpg"
+    },
+    {
+        "id": "immunity",
+        "name": "Immunity",
+        "tagline": "Protection & Resilience",
+        "price": 38,
+        "skuColor": "#D4A373",
+        "ingredients": [
+            "Immune Support Blend",
+            "Vitamin C & E",
+            "Zinc",
+            "Elderberry"
+        ],
+        "size": "60 Soft Chews · 8.5 oz (240g)",
+        "image": "/products/immunity.jpg"
+    }
+]

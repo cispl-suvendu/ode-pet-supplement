@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F4F1EA;
+  --foreground: #1A1A1A;
+  
+  --bone: #F4F1EA;
+  --obsidian: #1A1A1A;
+  --oat: #E2D9CE;
+  --sage: #7A8B76;
+  --clay: #BC7863;
+  
+  --success: #5A7247;
+  --warning: #D4A373;
+  --error: #9B4A46;
+  --info: #6D8A96;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-neue-haas), Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-ogg {
+  font-family: var(--font-ogg), Georgia, 'Times New Roman', serif;
+}
+
+/* Custom styled inputs with floating labels as requested: 1px bottom-border only */
+.ode-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--obsidian);
+  padding: 0.5rem 0;
+  width: 100%;
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.2s ease;
+}
+
+.ode-input:focus {
+  border-bottom-width: 2px;
+}
+
+/* Smooth scrolling and transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar matching brand colors */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bone);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--oat);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
@@ -24,7 +24,7 @@ const mockOrderItems = [
   },
 ];
 
-export default function OrderConfirmationPage() {
+function OrderConfirmationContent() {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("id") || "ODE" + Math.floor(100000 + Math.random() * 900000);
   const [mounted, setMounted] = useState(false);
@@ -39,8 +39,8 @@ export default function OrderConfirmationPage() {
     (acc, item) => acc + (item.subscription ? item.price * 0.85 : item.price) * item.quantity,
     0
   );
-  const mockShipping = 0;
-  const mockTotal = mockSubtotal + mockShipping;
+  const mockShipping: number = 0;
+  const mockTotal: number = mockSubtotal + mockShipping;
 
   const today = new Date();
   const tmrw = new Date(today);
@@ -157,5 +157,13 @@ export default function OrderConfirmationPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OrderConfirmationPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-bone"></div>}>
+      <OrderConfirmationContent />
+    </Suspense>
   );
 }

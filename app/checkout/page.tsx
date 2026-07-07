@@ -14,7 +14,15 @@ const FloatingInput = ({
   onChange,
   required,
   isValid,
-}: any) => (
+}: {
+  label: string;
+  id: string;
+  type?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  required?: boolean;
+  isValid?: boolean;
+}) => (
   <div className="relative w-full pt-5">
     <input
       type={type}

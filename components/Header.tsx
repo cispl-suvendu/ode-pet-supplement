@@ -7,11 +7,9 @@ import { useCart } from "@/context/CartContext";
 
 import { usePathname } from "next/navigation";
 
-interface HeaderProps {
-  onCartClick?: () => void;
-}
 
-export default function Header({ onCartClick }: HeaderProps) {
+
+export default function Header() {
   const { items, openCart } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

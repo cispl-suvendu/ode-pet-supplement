@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SciencePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-bone text-obsidian font-body pt-[104px]">
+    <div className="flex flex-col min-h-screen bg-bone text-obsidian font-body pt-[130px]">
       {/* 1. Editorial Hero Section */}
       <section className="relative w-full min-h-[75vh] flex flex-col lg:flex-row border-b border-obsidian/10">
         {/* Left Side: Copy */}

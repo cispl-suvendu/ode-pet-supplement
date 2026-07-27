@@ -58,7 +58,7 @@ export default function Shop() {
   };
 
   return (
-    <div className="pt-24 bg-bone min-h-screen">
+    <div className="pt-[130px] bg-bone min-h-screen">
       {/* Toast Notification */}
       {addedProduct && (
         <div className="fixed bottom-8 right-8 bg-obsidian text-bone px-6 py-4 z-50 flex items-center justify-between font-body text-xs uppercase tracking-wider animate-fade-in shadow-lg">

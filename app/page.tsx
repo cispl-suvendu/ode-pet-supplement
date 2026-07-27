@@ -494,30 +494,42 @@ export default function Home() {
       </section>
 
       {/* 7. Closing CTA Band */}
-      <section className="bg-sage text-bone py-24 px-6 md:px-12 lg:px-20 text-center relative overflow-hidden">
+      <section className="relative py-32 px-6 md:px-12 lg:px-20 text-center overflow-hidden flex items-center justify-center min-h-[500px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image src="/cta-bg.png" alt="Canine Wellness" fill className="object-cover object-center" />
+          {/* Subtle Dark Overlay */}
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+
         <div className="max-w-3xl mx-auto relative z-10">
-          <span className="font-body text-xs font-bold uppercase tracking-widest text-oat block mb-4">
+          <span className="font-body text-xs font-bold uppercase tracking-widest text-white block mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             CANINE WELLNESS REDEFINED
           </span>
-          <h2 className="font-ogg text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h2 className="font-ogg text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
             Integrity in every soft chew.
           </h2>
-          <p className="font-body text-base lg:text-lg text-bone/90 max-w-xl mx-auto leading-relaxed mb-10">
+          <p className="font-body text-base lg:text-lg text-white/90 max-w-xl mx-auto leading-relaxed mb-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             Formulated for life. Empower your dog&rsquo;s daily health with vet-grade active compound concentrations.
           </p>
           <div className="flex justify-center">
             <Link
               href="/shop"
-              className="inline-block bg-bone text-obsidian font-body text-xs font-semibold uppercase tracking-wider py-4 px-8 hover:opacity-90 transition-opacity"
-              style={{ borderRadius: "0px" }}
+              className="inline-block bg-white text-obsidian font-body text-sm font-bold uppercase tracking-widest py-5 px-10 rounded-full hover:bg-sage hover:text-white hover:scale-105 transition-all duration-300 shadow-2xl shadow-black/40 animate-pulse-glow"
             >
               Shop the Ritual
             </Link>
           </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs font-body text-bone/70 italic">
-            <span>✓ 30-Day Money-Back Guarantee</span>
-            <span className="hidden md:inline">·</span>
-            <span>✓ Independent Lab Certified</span>
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-body text-white font-medium italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> 
+              30-Day Guarantee
+            </span>
+            <span className="hidden md:inline text-white/50">•</span>
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> 
+              Independent Lab Certified
+            </span>
           </div>
         </div>
       </section>

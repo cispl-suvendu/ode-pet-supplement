@@ -36,7 +36,7 @@ export default function Home() {
             <p className="font-body text-base lg:text-lg text-obsidian/80 leading-relaxed mb-10 max-w-lg">
               Clinical-grade canine supplements formulated by veterinarians, backed by peer-reviewed research, and delivered with absolute ingredient transparency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <Link
                 href="/shop"
@@ -293,6 +293,77 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* 5.5 Premium Offer Grid Section */}
+      <section className="py-24 bg-bone border-t border-obsidian/5 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+          <div className="text-center mb-16">
+            <span className="font-body text-xs font-bold uppercase tracking-widest text-sage block mb-3">
+              EXCLUSIVE OFFERS
+            </span>
+            <h2 className="font-ogg text-3xl md:text-4xl lg:text-5xl font-bold text-obsidian">
+              Unlock your dog's best life.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Big Card (Spans 2 columns on desktop) */}
+            <div className="lg:col-span-2 bg-sage/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between border border-sage/20 relative overflow-hidden group hover:-translate-y-1 hover:shadow-xl hover:shadow-sage/10 transition-all duration-500">
+              <div className="absolute top-6 left-6 bg-sage text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full z-10 shadow-md">
+                Bundle & Save 20%
+              </div>
+              
+              <div className="flex-1 text-left relative z-10 pt-10 md:pt-0 pr-0 md:pr-8">
+                <h3 className="font-ogg text-4xl md:text-5xl font-bold text-obsidian mb-4">The Complete Ritual</h3>
+                <p className="font-body text-base md:text-lg text-obsidian/70 mb-8 max-w-md leading-relaxed">
+                  Combine Joint Support, Gut Health, and Skin & Coat. Subscribe to the ultimate wellness bundle and lock in 20% savings + free priority shipping.
+                </p>
+                <Link href="/shop/bundle" className="inline-flex bg-obsidian text-bone font-body text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-sage transition-colors duration-300">
+                  Claim Bundle Offer
+                </Link>
+              </div>
+
+              <div className="relative w-full md:w-[45%] h-[280px] md:h-[350px] mt-10 md:mt-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                <Image src="/products/joint-support.jpg" alt="Bundle" fill className="object-contain drop-shadow-2xl" />
+              </div>
+            </div>
+
+            {/* Right Column (Stacked Small Cards) */}
+            <div className="flex flex-col gap-6 lg:gap-8">
+              {/* Small Card 1 */}
+              <div className="flex-1 bg-clay/5 rounded-3xl p-8 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-clay/5 transition-all duration-500">
+                <div className="absolute top-5 left-5 bg-clay text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md">
+                  Buy 2 Get 1 Free
+                </div>
+                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <Image src="/products/gut-health.jpg" alt="Gut Health" fill className="object-contain" />
+                </div>
+                <div>
+                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2">Gut Health</h3>
+                  <Link href="/shop/gut-health" className="inline-flex border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-clay hover:border-clay transition-colors duration-300">
+                    Claim Offer →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Small Card 2 */}
+              <div className="flex-1 bg-oat/40 rounded-3xl p-8 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-obsidian/5 transition-all duration-500">
+                <div className="absolute top-5 left-5 bg-obsidian text-bone font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md">
+                  Free Shipping
+                </div>
+                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <Image src="/products/skin-coat.jpg" alt="Skin & Coat" fill className="object-contain" />
+                </div>
+                <div>
+                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2">Skin & Coat</h3>
+                  <Link href="/shop/skin-coat" className="inline-flex border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-obsidian/60 hover:border-obsidian/60 transition-colors duration-300">
+                    Claim Offer →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 6. Social Proof Section */}
       <section className="py-20 px-6 md:px-12 lg:px-20 bg-bone border-t border-obsidian/5">
@@ -306,13 +377,11 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
             {/* Review 1 */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 flex flex-col justify-between shadow-xl shadow-obsidian/5 border border-obsidian/5 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-              <div className="absolute top-2 right-4 text-oat/50 transition-colors group-hover:text-sage/10">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
+            <div className="bg-sage/5 rounded-3xl p-8 lg:p-10 flex flex-col justify-between border border-sage/10 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-sage/10 hover:border-sage/30 transition-all duration-500">
+              <div className="absolute -top-6 right-4 font-ogg text-[120px] text-obsidian/5 leading-none group-hover:text-sage/10 transition-colors duration-500 select-none pointer-events-none">
+                &rdquo;
               </div>
               <div className="relative z-10">
                 {/* 5 Star Rating Row */}
@@ -328,30 +397,28 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-full bg-sage/10 text-sage flex items-center justify-center font-heading text-xl font-bold border border-sage/20">
+                <div className="w-12 h-12 rounded-full bg-sage/20 text-sage flex items-center justify-center font-ogg text-2xl font-bold border border-sage/30">
                   S
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-body text-sm font-bold text-obsidian">
+                  <span className="font-ogg text-lg font-bold text-obsidian">
                     Sarah K.
                   </span>
-                  <span className="font-body text-xs text-obsidian/60 mt-0.5">
+                  <span className="font-body text-xs text-obsidian/60 mt-0.5 tracking-wide uppercase">
                     Greyhound · Joint Support
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Review 2 */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 flex flex-col justify-between shadow-xl shadow-obsidian/5 border border-obsidian/5 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-              <div className="absolute top-2 right-4 text-oat/50 transition-colors group-hover:text-sage/10">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
+            {/* Review 2 (Staggered) */}
+            <div className="bg-clay/5 rounded-3xl p-8 lg:p-10 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-clay/10 hover:border-clay/30 transition-all duration-500 md:mt-12">
+              <div className="absolute -top-6 right-4 font-ogg text-[120px] text-obsidian/5 leading-none group-hover:text-clay/10 transition-colors duration-500 select-none pointer-events-none">
+                &rdquo;
               </div>
               <div className="relative z-10">
                 {/* 5 Star Rating Row */}
-                <div className="flex space-x-1 mb-6 text-sage">
+                <div className="flex space-x-1 mb-6 text-clay">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                       <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
@@ -363,14 +430,14 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-full bg-clay/10 text-clay flex items-center justify-center font-heading text-xl font-bold border border-clay/20">
+                <div className="w-12 h-12 rounded-full bg-clay/20 text-clay flex items-center justify-center font-ogg text-2xl font-bold border border-clay/30">
                   D
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-body text-sm font-bold text-obsidian">
+                  <span className="font-ogg text-lg font-bold text-obsidian">
                     David L.
                   </span>
-                  <span className="font-body text-xs text-obsidian/60 mt-0.5">
+                  <span className="font-body text-xs text-obsidian/60 mt-0.5 tracking-wide uppercase">
                     Labrador · Skin & Coat
                   </span>
                 </div>
@@ -378,15 +445,13 @@ export default function Home() {
             </div>
 
             {/* Review 3 */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 flex flex-col justify-between shadow-xl shadow-obsidian/5 border border-obsidian/5 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
-              <div className="absolute top-2 right-4 text-oat/50 transition-colors group-hover:text-sage/10">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
+            <div className="bg-oat/40 rounded-3xl p-8 lg:p-10 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-obsidian/10 hover:border-obsidian/20 transition-all duration-500">
+              <div className="absolute -top-6 right-4 font-ogg text-[120px] text-obsidian/5 leading-none group-hover:text-obsidian/10 transition-colors duration-500 select-none pointer-events-none">
+                &rdquo;
               </div>
               <div className="relative z-10">
                 {/* 5 Star Rating Row */}
-                <div className="flex space-x-1 mb-6 text-sage">
+                <div className="flex space-x-1 mb-6 text-obsidian/80">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                       <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
@@ -398,14 +463,14 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-4 relative z-10">
-                <div className="w-12 h-12 rounded-full bg-obsidian/5 text-obsidian/70 flex items-center justify-center font-heading text-xl font-bold border border-obsidian/10">
+                <div className="w-12 h-12 rounded-full bg-obsidian/10 text-obsidian flex items-center justify-center font-ogg text-2xl font-bold border border-obsidian/20">
                   E
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-body text-sm font-bold text-obsidian">
+                  <span className="font-ogg text-lg font-bold text-obsidian">
                     Elena M.
                   </span>
-                  <span className="font-body text-xs text-obsidian/60 mt-0.5">
+                  <span className="font-body text-xs text-obsidian/60 mt-0.5 tracking-wide uppercase">
                     Golden Retriever · Gut Health
                   </span>
                 </div>

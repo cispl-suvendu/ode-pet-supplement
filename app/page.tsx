@@ -192,100 +192,101 @@ export default function Home() {
       </section>
 
       {/* 4. Value Props Section (MOVED DOWN) */}
-      <section className="py-20 px-6 md:px-12 lg:px-20 bg-bone">
+      <section className="py-24 px-6 md:px-12 lg:px-20 bg-bone border-t border-obsidian/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 flex flex-col items-center">
-            <span className="font-body text-xs font-bold uppercase tracking-widest text-clay block mb-3">
+          <div className="text-center mb-20 flex flex-col items-center">
+            <span className="font-body text-xs font-bold uppercase tracking-widest text-sage block mb-4 border border-sage/30 px-4 py-1.5 rounded-full">
               THE ODE PROTOCOL
             </span>
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-sage">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-              </svg>
-            </div>
-            <h2 className="font-ogg text-3xl md:text-4xl lg:text-5xl font-bold text-obsidian max-w-2xl mx-auto">
-              Canine health is a science, not a mystery.
+            <h2 className="font-ogg text-4xl md:text-5xl lg:text-6xl font-bold text-obsidian max-w-3xl mx-auto leading-tight">
+              Canine health is a science,<br className="hidden md:block"/> not a mystery.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Value Prop 1 */}
-            <div className="flex flex-col justify-between border-t border-obsidian/10 pt-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-oat rounded-full flex items-center justify-center text-sage">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-ogg text-2xl font-semibold text-obsidian">
-                    Clinical Concentrations
-                  </h3>
+            <div className="bg-sage/5 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-sage/10 transition-all duration-500">
+              <div className="absolute -top-6 right-2 font-ogg text-[150px] text-obsidian/5 leading-none group-hover:text-sage/10 transition-colors duration-500 select-none pointer-events-none">
+                01
+              </div>
+              <div className="relative z-10 mb-8">
+                <div className="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center text-sage mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                  </svg>
                 </div>
-                <p className="font-body text-sm text-obsidian/80 leading-relaxed mb-6">
+                <h3 className="font-ogg text-3xl font-bold text-obsidian mb-4 group-hover:text-sage transition-colors duration-300">
+                  Clinical Concentrations
+                </h3>
+                <p className="font-body text-base text-obsidian/70 leading-relaxed">
                   We formulate each chew with active ingredient levels mapped exactly to clinical trials. We never microdose ingredients for marketing claims.
                 </p>
               </div>
-              <div className="bg-oat/40 p-4 border-l-2 border-sage">
-                <span className="block font-body text-[10px] uppercase tracking-wider text-obsidian/60 font-semibold mb-1">
+              <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-sage/5 transition-colors duration-300">
+                <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-sage font-bold mb-2">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                   Persuasive Proof
                 </span>
-                <span className="font-body text-xs font-bold text-obsidian">
+                <span className="font-body text-sm font-medium text-obsidian leading-snug block">
                   Vet-formulated dossier with active mg dosages labeled on every jar.
                 </span>
               </div>
             </div>
 
             {/* Value Prop 2 */}
-            <div className="flex flex-col justify-between border-t border-obsidian/10 pt-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-oat rounded-full flex items-center justify-center text-sage">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-ogg text-2xl font-semibold text-obsidian">
-                    Absolute Traceability
-                  </h3>
+            <div className="bg-clay/5 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-clay/10 transition-all duration-500 md:mt-8">
+              <div className="absolute -top-6 right-2 font-ogg text-[150px] text-obsidian/5 leading-none group-hover:text-clay/10 transition-colors duration-500 select-none pointer-events-none">
+                02
+              </div>
+              <div className="relative z-10 mb-8">
+                <div className="w-14 h-14 bg-clay/10 rounded-full flex items-center justify-center text-clay mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
                 </div>
-                <p className="font-body text-sm text-obsidian/80 leading-relaxed mb-6">
+                <h3 className="font-ogg text-3xl font-bold text-obsidian mb-4 group-hover:text-clay transition-colors duration-300">
+                  Absolute Traceability
+                </h3>
+                <p className="font-body text-base text-obsidian/70 leading-relaxed">
                   Every batch undergoes independent laboratory testing. We publish Certificate of Analysis (COA) reports verifying purity, heavy metals clearance, and dosage.
                 </p>
               </div>
-              <div className="bg-oat/40 p-4 border-l-2 border-sage">
-                <span className="block font-body text-[10px] uppercase tracking-wider text-obsidian/60 font-semibold mb-1">
+              <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-clay/5 transition-colors duration-300">
+                <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-clay font-bold mb-2">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                   Persuasive Proof
                 </span>
-                <span className="font-body text-xs font-bold text-obsidian">
+                <span className="font-body text-sm font-medium text-obsidian leading-snug block">
                   100% third-party lab tested with unique batch QR code lookup.
                 </span>
               </div>
             </div>
 
             {/* Value Prop 3 */}
-            <div className="flex flex-col justify-between border-t border-obsidian/10 pt-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-oat rounded-full flex items-center justify-center text-sage">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-ogg text-2xl font-semibold text-obsidian">
-                    Zero Filler Policy
-                  </h3>
+            <div className="bg-oat/30 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-obsidian/10 transition-all duration-500">
+              <div className="absolute -top-6 right-2 font-ogg text-[150px] text-obsidian/5 leading-none group-hover:text-obsidian/10 transition-colors duration-500 select-none pointer-events-none">
+                03
+              </div>
+              <div className="relative z-10 mb-8">
+                <div className="w-14 h-14 bg-obsidian/5 rounded-full flex items-center justify-center text-obsidian mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
                 </div>
-                <p className="font-body text-sm text-obsidian/80 leading-relaxed mb-6">
+                <h3 className="font-ogg text-3xl font-bold text-obsidian mb-4 group-hover:text-obsidian/70 transition-colors duration-300">
+                  Zero Filler Policy
+                </h3>
+                <p className="font-body text-base text-obsidian/70 leading-relaxed">
                   We avoid starch binders, artificial preservatives, wheat, and soy. Our chews use cold-pressed real ingredients to preserve active compound integrity.
                 </p>
               </div>
-              <div className="bg-oat/40 p-4 border-l-2 border-sage">
-                <span className="block font-body text-[10px] uppercase tracking-wider text-obsidian/60 font-semibold mb-1">
+              <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-obsidian/5 transition-colors duration-300">
+                <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-obsidian font-bold mb-2">
+                  <svg className="w-3 h-3 text-obsidian" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                   Persuasive Proof
                 </span>
-                <span className="font-body text-xs font-bold text-obsidian">
+                <span className="font-body text-sm font-medium text-obsidian leading-snug block">
                   Cold-press processing badge & NASC Quality Audit seal.
                 </span>
               </div>
@@ -307,22 +308,26 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Big Card (Spans 2 columns on desktop) */}
-            <div className="lg:col-span-2 bg-sage/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between border border-sage/20 relative overflow-hidden group hover:-translate-y-1 hover:shadow-xl hover:shadow-sage/10 transition-all duration-500">
-              <div className="absolute top-6 left-6 bg-sage text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full z-10 shadow-md">
+            <div className="lg:col-span-2 bg-sage/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between border border-sage/20 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-sage/20 hover:border-sage/40 transition-all duration-500">
+              <div className="absolute top-6 left-6 bg-sage text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full z-10 shadow-md animate-pulse-glow">
                 Bundle & Save 20%
               </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-sage/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
               
               <div className="flex-1 text-left relative z-10 pt-10 md:pt-0 pr-0 md:pr-8">
-                <h3 className="font-ogg text-4xl md:text-5xl font-bold text-obsidian mb-4">The Complete Ritual</h3>
+                <h3 className="font-ogg text-4xl md:text-5xl font-bold text-obsidian mb-4 transition-colors duration-500 group-hover:text-sage">The Complete Ritual</h3>
                 <p className="font-body text-base md:text-lg text-obsidian/70 mb-8 max-w-md leading-relaxed">
                   Combine Joint Support, Gut Health, and Skin & Coat. Subscribe to the ultimate wellness bundle and lock in 20% savings + free priority shipping.
                 </p>
-                <Link href="/shop/bundle" className="inline-flex bg-obsidian text-bone font-body text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-sage transition-colors duration-300">
+                <Link href="/shop/bundle" className="inline-flex items-center gap-2 bg-obsidian text-bone font-body text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-sage hover:shadow-lg hover:shadow-sage/30 transition-all duration-300 group/btn">
                   Claim Bundle Offer
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
                 </Link>
               </div>
 
-              <div className="relative w-full md:w-[45%] h-[280px] md:h-[350px] mt-10 md:mt-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+              <div className="relative w-full md:w-[45%] h-[280px] md:h-[350px] mt-10 md:mt-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
                 <Image src="/products/joint-support.jpg" alt="Bundle" fill className="object-contain drop-shadow-2xl" />
               </div>
             </div>
@@ -330,33 +335,41 @@ export default function Home() {
             {/* Right Column (Stacked Small Cards) */}
             <div className="flex flex-col gap-6 lg:gap-8">
               {/* Small Card 1 */}
-              <div className="flex-1 bg-clay/5 rounded-3xl p-8 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-clay/5 transition-all duration-500">
-                <div className="absolute top-5 left-5 bg-clay text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md">
+              <div className="flex-1 bg-clay/5 rounded-3xl p-8 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-clay/10 hover:border-clay/30 transition-all duration-500">
+                <div className="absolute top-5 left-5 bg-clay text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md animate-pulse-glow">
                   Buy 2 Get 1 Free
                 </div>
-                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-clay/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
                   <Image src="/products/gut-health.jpg" alt="Gut Health" fill className="object-contain" />
                 </div>
-                <div>
-                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2">Gut Health</h3>
-                  <Link href="/shop/gut-health" className="inline-flex border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-clay hover:border-clay transition-colors duration-300">
-                    Claim Offer →
+                <div className="relative z-10">
+                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2 transition-colors duration-300 group-hover:text-clay">Gut Health</h3>
+                  <Link href="/shop/gut-health" className="inline-flex items-center gap-1 border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-clay hover:border-clay transition-colors duration-300 group/link">
+                    Claim Offer
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 transition-transform duration-300 group-hover/link:translate-x-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
                   </Link>
                 </div>
               </div>
 
               {/* Small Card 2 */}
-              <div className="flex-1 bg-oat/40 rounded-3xl p-8 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-1 hover:shadow-lg hover:shadow-obsidian/5 transition-all duration-500">
-                <div className="absolute top-5 left-5 bg-obsidian text-bone font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md">
+              <div className="flex-1 bg-oat/40 rounded-3xl p-8 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-obsidian/10 hover:border-obsidian/20 transition-all duration-500">
+                <div className="absolute top-5 left-5 bg-obsidian text-bone font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md animate-pulse-glow">
                   Free Shipping
                 </div>
-                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
                   <Image src="/products/skin-coat.jpg" alt="Skin & Coat" fill className="object-contain" />
                 </div>
-                <div>
-                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2">Skin & Coat</h3>
-                  <Link href="/shop/skin-coat" className="inline-flex border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-obsidian/60 hover:border-obsidian/60 transition-colors duration-300">
-                    Claim Offer →
+                <div className="relative z-10">
+                  <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2 transition-colors duration-300 group-hover:text-obsidian/70">Skin & Coat</h3>
+                  <Link href="/shop/skin-coat" className="inline-flex items-center gap-1 border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-obsidian/60 hover:border-obsidian/60 transition-colors duration-300 group/link">
+                    Claim Offer
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 transition-transform duration-300 group-hover/link:translate-x-1">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
                   </Link>
                 </div>
               </div>

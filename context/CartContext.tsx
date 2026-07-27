@@ -64,7 +64,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       if (existingItemIndex > -1) {
         newItems[existingItemIndex] = {
           ...newItems[existingItemIndex],
-          quantity: newItems[existingItemIndex].quantity + quantity,
+          quantity: newItems[existingItemIndex].quantity + quantity, 
         };
       } else {
         newItems.push({ product, quantity, isSubscription });

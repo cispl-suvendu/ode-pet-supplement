@@ -25,6 +25,20 @@ const config: Config = {
         display: ["var(--font-ogg)", "Georgia", "Times New Roman", "serif"],
         body: ["var(--font-neue-haas)", "Inter", "system-ui", "sans-serif"],
       },
+      keyframes: {
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slow-fade": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+        "slow-fade": "slow-fade 1.2s ease-out forwards",
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,51 @@
+const mainGallerySwiper = new Swiper('.pdp-main-gallery', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: false, // Could add next/prev buttons if needed
+            thumbs: {
+              swiper: thumbsSwiper,
+            },
+            pagination: {
+              el: '.gallery-pagination',
+              clickable: true,
+              dynamicBullets: true, // Condenses bullets on small screens
+            },
+  
+            breakpoints: {
+              768: {
+                navigation: {
+                  nextEl: '.gallery-button-next',
+                  prevEl: '.gallery-button-prev',
+                },
+              }
+            }
+            });
+
+
+             /* gallery-pagination */
+  .gallery-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+  }
+
+  .gallery-pagination .swiper-pagination-bullet {
+    background: #d7d7d7;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+  .gallery-pagination .swiper-pagination-bullet-active {
+    background: #5389a1;
+    width: 24px;
+    border-radius: 30px;
+  }
+
+  
+
+  .pdp-main-gallery-container .swiper-button-disabled path{
+    fill:rgba(41, 41, 41, 0.3);
+  }

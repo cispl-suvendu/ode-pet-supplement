@@ -9,72 +9,80 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 2. Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex flex-col lg:flex-row bg-bone pt-[104px] lg:pt-0">
-        {/* Left Side: Copy & CTA */}
-        <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 py-12 lg:py-0 bg-bone">
-          <div className="max-w-xl">
-            <h1 className="font-ogg text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-obsidian mb-6">
-              The science of their best life.
+      {/* 2. Hero Section - Premium Editorial */}
+      <section className="relative w-full min-h-screen bg-bone overflow-hidden flex items-center pt-[104px]">
+        {/* Background Image with seamless blend */}
+        <div className="absolute top-[104px] bottom-0 left-0 right-0 z-0 animate-slow-fade">
+          <Image
+            src="/products/life-style.png"
+            alt="Healthy dog resting in natural light"
+            fill
+            className="object-cover object-[70%_center] lg:object-right"
+            priority
+            sizes="100vw"
+          />
+          {/* Mobile gradient (bottom up) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-bone via-bone/80 to-transparent lg:hidden" />
+          {/* Desktop gradient (left to right) */}
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-bone via-bone/95 to-transparent w-[70%]" />
+        </div>
+
+        {/* Content Overlay */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-0">
+          <div className="max-w-xl lg:max-w-2xl animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+            <h1 className="font-ogg text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.05] text-obsidian mb-6 tracking-tight">
+              The science of <span className="italic font-light text-sage">their</span> best life.
             </h1>
-            <p className="font-body text-base lg:text-lg text-obsidian/80 leading-relaxed mb-8">
+            <p className="font-body text-base lg:text-lg text-obsidian/80 leading-relaxed mb-10 max-w-lg">
               Clinical-grade canine supplements formulated by veterinarians, backed by peer-reviewed research, and delivered with absolute ingredient transparency.
             </p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <Link
                 href="/shop"
-                className="inline-block bg-sage text-bone font-body text-xs font-semibold uppercase tracking-wider py-4 px-8 hover:opacity-90 transition-opacity"
-                style={{ borderRadius: "0px" }}
+                className="group relative inline-flex items-center justify-center bg-obsidian text-bone font-body text-xs font-semibold uppercase tracking-widest py-5 px-10 overflow-hidden transition-all duration-300 hover:bg-sage hover:shadow-lg rounded-full lg:rounded-none"
               >
-                Shop the Ritual
+                <span className="relative z-10 flex items-center gap-2">
+                  Shop the Ritual
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 transition-transform group-hover:translate-x-1">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
               </Link>
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1.5 border-l-2 border-sage/30 pl-6 hidden sm:flex">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-clay/20 border-2 border-bone flex items-center justify-center text-clay font-bold text-xs">J</div>
-                    <div className="w-8 h-8 rounded-full bg-sage/20 border-2 border-bone flex items-center justify-center text-sage font-bold text-xs">A</div>
-                    <div className="w-8 h-8 rounded-full bg-obsidian/10 border-2 border-bone flex items-center justify-center text-obsidian font-bold text-xs">M</div>
+                    <div className="w-8 h-8 rounded-full bg-clay border-2 border-bone flex items-center justify-center text-bone font-bold text-xs shadow-sm">J</div>
+                    <div className="w-8 h-8 rounded-full bg-sage border-2 border-bone flex items-center justify-center text-bone font-bold text-xs shadow-sm">A</div>
+                    <div className="w-8 h-8 rounded-full bg-obsidian border-2 border-bone flex items-center justify-center text-bone font-bold text-xs shadow-sm">M</div>
                   </div>
-                  <div className="flex space-x-0.5 text-sage ml-1">
+                  <div className="flex space-x-0.5 text-sage ml-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                      <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
                         <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="font-body text-xs text-obsidian/70 font-medium">
-                  Trusted by <strong className="text-obsidian">10,000+</strong> dog parents
+                  Trusted by <strong className="text-obsidian">10,000+</strong> parents
                 </p>
               </div>
             </div>
 
-            {/* Persuasive Proof Point paired with Hero CTA */}
-            <div className="mt-6 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-sage">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p className="font-body text-xs text-obsidian/60">
+            {/* Persuasive Proof Point */}
+            <div className="mt-8 pt-6 border-t border-obsidian/10 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-sage/10 flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-sage">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </div>
+              <p className="font-body text-xs text-obsidian/70">
                 Clinically dosed active ingredients. No proprietary secrets.
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Right Side: Image (Stacks on top on mobile, sits on right on desktop) */}
-        {/* Mobile: Order 1, Desktop: Order 2 */}
-        <div className="w-full lg:w-[40%] h-[350px] md:h-[450px] lg:h-auto relative order-first lg:order-last">
-          <Image
-            src="/products/life-style.png"
-            alt="Healthy dog resting in natural light"
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 1024px) 100vw, 40vw"
-          />
-          {/* Top overlay to ensure header readability on mobile */}
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/30 via-transparent to-transparent lg:hidden" />
         </div>
       </section>
 

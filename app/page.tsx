@@ -12,19 +12,19 @@ export default function Home() {
       {/* 2. Hero Section - Premium Editorial */}
       <section className="relative w-full min-h-screen bg-bone overflow-hidden flex items-center pt-[104px]">
         {/* Background Image with seamless blend */}
-        <div className="absolute top-[104px] bottom-0 left-0 right-0 z-0 animate-slow-fade">
+        <div className="absolute top-[104px] bottom-0 left-0 right-0 lg:left-[35%] lg:w-[65%] z-0 animate-slow-fade">
           <Image
             src="/products/life-style.png"
             alt="Healthy dog resting in natural light"
             fill
-            className="object-cover object-[70%_center] lg:object-right"
+            className="object-cover object-center"
             priority
             sizes="100vw"
           />
           {/* Mobile gradient (bottom up) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-bone via-bone/80 to-transparent lg:hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-bone from-[40%] via-bone/40 via-[60%] to-transparent lg:hidden" />
           {/* Desktop gradient (left to right) */}
-          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-bone via-bone/95 to-transparent w-[70%]" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-bone from-0% via-bone/10 via-[15%] to-transparent" />
         </div>
 
         {/* Content Overlay */}
@@ -150,13 +150,13 @@ export default function Home() {
               >
                 <div className="p-6 flex-1 flex flex-col items-center">
                   {/* Image container */}
-                  <div className="relative w-full h-[180px] mb-6 flex items-center justify-center">
+                  <div className="relative w-full h-[220px] md:h-[260px] mb-6 flex items-center justify-center">
                     <Image
                       src={product.image}
                       alt={product.name}
-                      width={180}
-                      height={180}
-                      className="object-contain max-h-full"
+                      width={260}
+                      height={260}
+                      className="object-contain max-h-full transition-transform duration-500 hover:scale-105"
                     />
                   </div>
 

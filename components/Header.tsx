@@ -64,9 +64,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Ode Logo"
-              width={70}
-              height={28}
-              className="h-7 w-auto object-contain"
+              width={120}
+              height={48}
+              className="h-10 md:h-12 w-auto object-contain"
               priority
             />
           </Link>

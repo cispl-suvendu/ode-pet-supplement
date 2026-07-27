@@ -308,42 +308,51 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Big Card (Spans 2 columns on desktop) */}
-            <div className="lg:col-span-2 bg-sage/5 rounded-3xl p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between border border-sage/20 relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-sage/20 hover:border-sage/40 transition-all duration-500">
-              <div className="absolute top-6 left-6 bg-sage text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full z-10 shadow-md animate-pulse-glow">
-                Bundle & Save 20%
+            <div className="lg:col-span-2 rounded-[2rem] p-8 lg:p-12 flex flex-col justify-end relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-obsidian/30 transition-all duration-700 min-h-[400px]">
+              {/* Background Image */}
+              <div className="absolute inset-0 z-0 bg-obsidian">
+                <Image src="/bento-bg.png" alt="Lifestyle" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
+                {/* Gradient overlay focused only on the bottom half where the text lives */}
+                <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-sage/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+              {/* Elegant Stamp Badge */}
+              <div className="absolute top-6 left-6 z-10">
+                <div className="relative w-24 h-24 bg-sage rounded-full flex items-center justify-center text-center shadow-lg group-hover:rotate-12 transition-transform duration-700">
+                  <span className="font-ogg text-white text-sm font-bold leading-tight">
+                    Save<br/>20%
+                  </span>
+                  {/* Decorative dashed border */}
+                  <div className="absolute inset-1.5 border border-dashed border-white/50 rounded-full" />
+                </div>
+              </div>
               
-              <div className="flex-1 text-left relative z-10 pt-10 md:pt-0 pr-0 md:pr-8">
-                <h3 className="font-ogg text-4xl md:text-5xl font-bold text-obsidian mb-4 transition-colors duration-500 group-hover:text-sage">The Complete Ritual</h3>
-                <p className="font-body text-base md:text-lg text-obsidian/70 mb-8 max-w-md leading-relaxed">
+              <div className="relative z-10 max-w-lg mt-32">
+                <h3 className="font-ogg text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">The Complete Ritual</h3>
+                <p className="font-body text-base md:text-lg text-white/90 mb-8 leading-relaxed drop-shadow-sm">
                   Combine Joint Support, Gut Health, and Skin & Coat. Subscribe to the ultimate wellness bundle and lock in 20% savings + free priority shipping.
                 </p>
-                <Link href="/shop/bundle" className="inline-flex items-center gap-2 bg-obsidian text-bone font-body text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-sage hover:shadow-lg hover:shadow-sage/30 transition-all duration-300 group/btn">
+                <Link href="/shop/bundle" className="inline-flex items-center gap-2 bg-white text-obsidian font-body text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-sage hover:text-white hover:shadow-lg hover:shadow-sage/20 transition-all duration-300 group/btn">
                   Claim Bundle Offer
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                   </svg>
                 </Link>
               </div>
-
-              <div className="relative w-full md:w-[45%] h-[280px] md:h-[350px] mt-10 md:mt-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
-                <Image src="/products/joint-support.jpg" alt="Bundle" fill className="object-contain drop-shadow-2xl" />
-              </div>
             </div>
 
             {/* Right Column (Stacked Small Cards) */}
             <div className="flex flex-col gap-6 lg:gap-8">
               {/* Small Card 1 */}
-              <div className="flex-1 bg-clay/5 rounded-3xl p-8 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-clay/10 hover:border-clay/30 transition-all duration-500">
-                <div className="absolute top-5 left-5 bg-clay text-white font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md animate-pulse-glow">
-                  Buy 2 Get 1 Free
+              <div className="flex-1 bg-clay/5 rounded-[2rem] p-8 flex flex-col justify-between border border-clay/10 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-clay/10 hover:border-clay/30 transition-all duration-500">
+                <div className="absolute top-0 right-0 bg-clay text-white font-body text-[9px] font-bold uppercase tracking-widest px-10 py-1.5 shadow-md translate-x-8 translate-y-5 rotate-45 z-10">
+                  Buy 2 Get 1
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-clay/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
-                  <Image src="/products/gut-health.jpg" alt="Gut Health" fill className="object-contain" />
+                <div className="relative w-full h-[140px] mb-6 mt-2 flex items-center justify-center group-hover:scale-125 transition-transform duration-700">
+                  <Image src="/products/gut-health.jpg" alt="Gut Health" fill className="object-contain drop-shadow-xl" />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 mt-auto">
                   <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2 transition-colors duration-300 group-hover:text-clay">Gut Health</h3>
                   <Link href="/shop/gut-health" className="inline-flex items-center gap-1 border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-clay hover:border-clay transition-colors duration-300 group/link">
                     Claim Offer
@@ -355,15 +364,15 @@ export default function Home() {
               </div>
 
               {/* Small Card 2 */}
-              <div className="flex-1 bg-oat/40 rounded-3xl p-8 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-obsidian/10 hover:border-obsidian/20 transition-all duration-500">
-                <div className="absolute top-5 left-5 bg-obsidian text-bone font-body text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-md animate-pulse-glow">
-                  Free Shipping
+              <div className="flex-1 bg-oat/40 rounded-[2rem] p-8 flex flex-col justify-between border border-obsidian/5 relative overflow-hidden group hover:-translate-y-2 hover:shadow-xl hover:shadow-obsidian/10 hover:border-obsidian/20 transition-all duration-500">
+                <div className="absolute top-0 right-0 bg-obsidian text-bone font-body text-[9px] font-bold uppercase tracking-widest px-10 py-1.5 shadow-md translate-x-8 translate-y-5 rotate-45 z-10">
+                  Free Ship
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="relative w-full h-[140px] mb-6 mt-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
-                  <Image src="/products/skin-coat.jpg" alt="Skin & Coat" fill className="object-contain" />
+                <div className="relative w-full h-[140px] mb-6 mt-2 flex items-center justify-center group-hover:scale-125 transition-transform duration-700">
+                  <Image src="/products/skin-coat.jpg" alt="Skin & Coat" fill className="object-contain drop-shadow-xl" />
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 mt-auto">
                   <h3 className="font-ogg text-2xl font-bold text-obsidian mb-2 transition-colors duration-300 group-hover:text-obsidian/70">Skin & Coat</h3>
                   <Link href="/shop/skin-coat" className="inline-flex items-center gap-1 border-b border-obsidian text-obsidian font-body text-xs font-bold uppercase tracking-widest pb-1 hover:text-obsidian/60 hover:border-obsidian/60 transition-colors duration-300 group/link">
                     Claim Offer

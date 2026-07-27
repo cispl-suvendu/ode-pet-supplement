@@ -30,7 +30,7 @@ export default function Home() {
         {/* Content Overlay */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-0">
           <div className="max-w-xl lg:max-w-2xl animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-            <h1 className="font-ogg text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.05] text-obsidian mb-6 tracking-tight">
+            <h1 className="font-ogg text-5xl md:text-6xl lg:text-[5rem] font-[600] leading-[1.05] text-obsidian mb-6 tracking-tight">
               The science of <span className="italic font-light text-sage">their</span> best life.
             </h1>
             <p className="font-body text-base lg:text-lg text-obsidian/80 leading-relaxed mb-10 max-w-lg">
@@ -40,7 +40,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
               <Link
                 href="/shop"
-                className="group relative inline-flex items-center justify-center bg-obsidian text-bone font-body text-xs font-semibold uppercase tracking-widest py-5 px-10 overflow-hidden transition-all duration-300 hover:bg-sage hover:shadow-lg rounded-full lg:rounded-none"
+                className="group relative inline-flex items-center justify-center bg-obsidian text-bone font-body text-xs font-semibold uppercase tracking-widest py-5 px-10 overflow-hidden transition-all duration-300 hover:bg-sage hover:shadow-lg rounded-full"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Shop the Ritual
@@ -199,7 +199,7 @@ export default function Home() {
               THE ODE PROTOCOL
             </span>
             <h2 className="font-ogg text-4xl md:text-5xl lg:text-6xl font-bold text-obsidian max-w-3xl mx-auto leading-tight">
-              Canine health is a science,<br className="hidden md:block"/> not a mystery.
+              Canine health is a science,<br className="hidden md:block" /> not a mystery.
             </h2>
           </div>
 
@@ -225,7 +225,7 @@ export default function Home() {
               </div>
               <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-sage/5 transition-colors duration-300">
                 <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-sage font-bold mb-2">
-                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" /></svg>
                   Persuasive Proof
                 </span>
                 <span className="font-body text-sm font-medium text-obsidian leading-snug block">
@@ -254,7 +254,7 @@ export default function Home() {
               </div>
               <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-clay/5 transition-colors duration-300">
                 <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-clay font-bold mb-2">
-                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" /></svg>
                   Persuasive Proof
                 </span>
                 <span className="font-body text-sm font-medium text-obsidian leading-snug block">
@@ -283,7 +283,7 @@ export default function Home() {
               </div>
               <div className="relative z-10 bg-oat/50 rounded-2xl p-5 border border-obsidian/5 group-hover:bg-obsidian/5 transition-colors duration-300">
                 <span className="flex items-center gap-2 font-body text-[10px] uppercase tracking-widest text-obsidian font-bold mb-2">
-                  <svg className="w-3 h-3 text-obsidian" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                  <svg className="w-3 h-3 text-obsidian" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" /></svg>
                   Persuasive Proof
                 </span>
                 <span className="font-body text-sm font-medium text-obsidian leading-snug block">
@@ -320,13 +320,13 @@ export default function Home() {
               <div className="absolute top-6 left-6 z-10">
                 <div className="relative w-24 h-24 bg-sage rounded-full flex items-center justify-center text-center shadow-lg group-hover:rotate-12 transition-transform duration-700">
                   <span className="font-ogg text-white text-sm font-bold leading-tight">
-                    Save<br/>20%
+                    Save<br />20%
                   </span>
                   {/* Decorative dashed border */}
                   <div className="absolute inset-1.5 border border-dashed border-white/50 rounded-full" />
                 </div>
               </div>
-              
+
               <div className="relative z-10 max-w-lg mt-32">
                 <h3 className="font-ogg text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">The Complete Ritual</h3>
                 <p className="font-body text-base md:text-lg text-white/90 mb-8 leading-relaxed drop-shadow-sm">
@@ -531,12 +531,12 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-body text-white font-medium italic drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
             <span className="flex items-center gap-1">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> 
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
               30-Day Guarantee
             </span>
             <span className="hidden md:inline text-white/50">•</span>
             <span className="flex items-center gap-1">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> 
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
               Independent Lab Certified
             </span>
           </div>

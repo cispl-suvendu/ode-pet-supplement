@@ -31,9 +31,11 @@ export default function ProductPage({ params }: PageProps) {
     .slice(0, 3);
 
   return (
-    <ProductDetailClient
-      product={product}
-      relatedProducts={relatedProducts}
-    />
+    <div className="pt-[60px]">
+      <ProductDetailClient
+        product={product}
+        relatedProducts={relatedProducts}
+      />
+    </div>
   );
 }

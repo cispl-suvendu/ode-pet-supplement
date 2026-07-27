@@ -58,7 +58,7 @@ export default function Shop() {
   };
 
   return (
-    <div className="pt-[130px] bg-bone min-h-screen">
+    <div className="pt-[116px] bg-bone min-h-screen">
       {/* Toast Notification */}
       {addedProduct && (
         <div className="fixed bottom-8 right-8 bg-obsidian text-bone px-6 py-4 z-50 flex items-center justify-between font-body text-xs uppercase tracking-wider animate-fade-in shadow-lg">
@@ -96,11 +96,10 @@ export default function Shop() {
               <button
                 key={f.id}
                 onClick={() => setSelectedFilter(f.id)}
-                className={`font-body text-xs font-semibold tracking-wider uppercase py-2 px-4 border transition-all ${
-                  selectedFilter === f.id
+                className={`font-body text-xs font-semibold tracking-wider uppercase py-2 px-4 border transition-all ${selectedFilter === f.id
                     ? "bg-obsidian border-obsidian text-bone"
                     : "bg-transparent border-obsidian/20 text-obsidian hover:border-obsidian"
-                }`}
+                  }`}
                 style={{ borderRadius: "0px" }}
               >
                 {f.name}
